@@ -1,0 +1,8 @@
+python-dotenv
+prefect-gcp
+pandas-gbq
+pandas
+protobuf
+pyarrow
+dbt-core
+dbt-bigquery
