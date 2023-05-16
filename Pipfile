@@ -5,6 +5,14 @@ name = "pypi"
 
 [packages]
 prefect = "*"
+prefect-gcp = "*"
+python-dotenv = "*"
+pandas = "*"
+fastparquet = "*"
+pyspark = "*"
+pandas-gbq = "*"
+gcsfs = "*"
+dbt-core = "*"
 
 [dev-packages]
 
