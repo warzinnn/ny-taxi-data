@@ -12,7 +12,6 @@ networks:
 services:
   prefect-server:
     image: ${SERVER_IMAGE}
-    
     volumes:
       - prefect_data:/root/.prefect
       - prefect_flows:/opt/prefect/flows

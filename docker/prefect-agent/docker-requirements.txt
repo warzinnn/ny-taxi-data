@@ -1,0 +1,9 @@
+prefect-gcp
+prefect-github
+prefect-dbt
+pandas-gbq
+pandas
+protobuf
+pyarrow
+dbt-core
+dbt-bigquery
