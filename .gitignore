@@ -7,3 +7,9 @@
 __pycache__
 .env
 .vscode
+
+# DBT
+.dbt-profile
+target/
+dbt_packages/
+logs/

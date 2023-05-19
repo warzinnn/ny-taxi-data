@@ -13,6 +13,9 @@ pyspark = "*"
 pandas-gbq = "*"
 gcsfs = "*"
 dbt-core = "*"
+install = "*"
+dbt-bigquery = "*"
+prefect-dbt = "*"
 
 [dev-packages]
 
