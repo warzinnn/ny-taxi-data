@@ -14,7 +14,7 @@ def do_notification(payload: str):
 
 
 @flow(name="orchestration-flow")
-def main_orchestrator(taxi_color: str, years: list, months: list):
+def main_orchestrator(taxi_color: list, years: list, months: list):
     """Main flow"""
     notification_block = {
         "flow_name": main_orchestrator.name,
