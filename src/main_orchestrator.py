@@ -14,7 +14,7 @@ def do_notification(payload: str):
 
 
 @flow(name="orchestration-flow")
-def main_orchestrator(taxi_color: list, years: list, months: list):
+def main_orchestrator(years: list[int], months: list[int]):
     """Main flow"""
     notification_block = {
         "flow_name": main_orchestrator.name,
@@ -23,7 +23,8 @@ def main_orchestrator(taxi_color: list, years: list, months: list):
         "start_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     }
     do_notification(notification_block)  # Start
-    for color in taxi_color:
+    taxi_colors = ['green', 'yellow']
+    for color in taxi_colors:
         elt_orchestration_flow(color, years, months)
     
     notification_block = {
@@ -54,7 +55,6 @@ def main_orchestrator(taxi_color: list, years: list, months: list):
 
 if __name__ == "__main__":
     main_orchestrator(
-        taxi_color=["yellow"],
         years=[2020],
         months=[8],
     )
