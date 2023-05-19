@@ -28,9 +28,8 @@ def dbt_seeds():
 
 @task(name="execute-dbt-build", log_prints=True)
 def dbt_run():
-    # commands=["dbt build -t prod --vars is_test: false"]
     DbtCoreOperation(
-        commands=["dbt build -t prod"],
+        commands=["dbt build -t prod --vars is_test: false"],
         project_dir="src/dbt_nytaxi/",
         profiles_dir=".dbt-profile/",
         dbt_cli_profile=DBT_CLI_PROFILE,
