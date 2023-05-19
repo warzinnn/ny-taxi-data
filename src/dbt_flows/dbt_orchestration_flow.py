@@ -8,7 +8,7 @@ DBT_CLI_PROFILE = DbtCliProfile.load("profile-bq-dbt-ny-taxi-prod")
 def dbt_deps():
     DbtCoreOperation(
         commands=["dbt deps"],
-        project_dir="dbt_nytaxi/",
+        project_dir="src/dbt_nytaxi/",
         profiles_dir=".dbt-profile/",
         dbt_cli_profile=DBT_CLI_PROFILE,
         overwrite_profiles=True,
@@ -19,7 +19,7 @@ def dbt_deps():
 def dbt_seeds():
     DbtCoreOperation(
         commands=["dbt seed"],
-        project_dir="dbt_nytaxi/",
+        project_dir="src/dbt_nytaxi/",
         profiles_dir=".dbt-profile/",
         dbt_cli_profile=DBT_CLI_PROFILE,
         overwrite_profiles=True,
@@ -31,7 +31,7 @@ def dbt_run():
     # commands=["dbt build -t prod --vars is_test: false"]
     DbtCoreOperation(
         commands=["dbt build -t prod"],
-        project_dir="dbt_nytaxi/",
+        project_dir="src/dbt_nytaxi/",
         profiles_dir=".dbt-profile/",
         dbt_cli_profile=DBT_CLI_PROFILE,
         overwrite_profiles=True,
@@ -41,4 +41,6 @@ def dbt_run():
 @flow(name="dbt-orchestration-flow")
 def dbt_orchestrator():
     """DBT orchestrator flow"""
+    dbt_deps()
+    dbt_seeds()
     dbt_run()
