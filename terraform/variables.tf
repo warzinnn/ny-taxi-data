@@ -33,7 +33,7 @@ variable "vm_name" {
 
 variable "machine_type" {
   description = "Machine type for VM instance"
-  default     = "e2-standard-4"
+  default     = "e2-standard-2"
   type        = string
 }
 
@@ -45,8 +45,7 @@ variable "vm_image" {
 
 variable "BQ_DATASET" {
   description = "BigQuery Dataset"
-  type        = string
-  default     = "nytaxi_bq"
+  default     = ["nytaxi_bq", "dbt_nytaxi_stag", "dbt_nytaxi_prod"]
 }
 
 variable "registry_id" {
