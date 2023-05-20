@@ -35,11 +35,4 @@ def dbt_run():
         dbt_cli_profile=DBT_CLI_PROFILE,
         overwrite_profiles=True,
     ).run()
-
-
-@flow(name="dbt-orchestration-flow")
-def dbt_orchestrator():
-    """DBT orchestrator flow"""
-    dbt_deps()
-    dbt_seeds()
-    dbt_run()
+    
