@@ -1,6 +1,6 @@
 # NY Taxi Data - DE Project
 
-Simple ELT Pipelipe which gets data from [NY Taxi Trips](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) transform it and make the information available for futher analysis.
+Simple ELT Pipelipe which gets data from [NY Taxi Trips,](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) transform it and make the information available for futher analysis.
 - Project realized for studies purposes, along the course of [DataTalksClub - Data Engineering Zoomcamp.](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 
 ### Overview
@@ -10,7 +10,7 @@ The docker images created to containerize the prefect server and prefect agent w
 In the end, the data is served on Looker Studio.
 
 ### Pipeline Flow
-<img width="1020" alt="pipeline_flow3" src="https://github.com/warzinnn/ny-taxi-data/assets/102708101/e3b93d30-3728-4e4b-af3b-1f6ea14defe1">
+<img width="999" alt="pipeline_final" src="https://github.com/warzinnn/ny-taxi-data/assets/102708101/34c09039-e5e7-4883-8086-0b00264ac2b6">
 
 ### Tools and Technologies Used
 - [**Python**](https://www.python.org)
@@ -26,3 +26,5 @@ In the end, the data is served on Looker Studio.
 - Data Visualization - [**Looker Studio**](https://lookerstudio.google.com/)
 - Notifications Webhook: [**Discord**](https://discord.com/developers/docs/resources/webhook)
 
+### Looker Studio Report example
+<img width="1020" alt="pipeline_flow3" src="https://github.com/warzinnn/ny-taxi-data/assets/102708101/371d1e3b-95a0-45b8-8811-06e2df83d987">
